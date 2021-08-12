@@ -24,13 +24,6 @@
     "url": "https://github.com/masterjanic/discord.js-template/issues"
   },
   "homepage": "https://github.com/masterjanic/discord.js-template#readme",
-  "prettier": {
-    "singleQuote": true,
-    "printWidth": 120,
-    "trailingComma": "all",
-    "endOfLine": "lf",
-    "arrowParens": "avoid"
-  },
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=7.0.0"
@@ -45,7 +38,7 @@
   },
   "dependencies": {
     "bufferutil": "^4.0.3",
-    "discord.js": "github:discordjs/discord.js",
+    "discord.js": "^13.0.1",
     "utf-8-validate": "^5.0.5",
     "zlib-sync": "^0.1.7"
   }
