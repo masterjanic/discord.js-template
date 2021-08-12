@@ -11,6 +11,15 @@ const client = new Client({
 client.interactions = new Collection();
 
 const eventFiles = readdirSync('./src/events').filter(file => file.endsWith('.js'));
-eventFiles.forEach(file => client.on(file.split('.')[0], require(`./events/${file}`).bind(null, client)));
+for (const file of eventFiles) {
+  const eventName = file.split('.')[0];
+  const event = require(`./events/${file}`);
+
+  if (event.once) {
+    client.once(eventName, (...args) => event.execute(client, ...args));
+  } else {
+    client.on(eventName, (...args) => event.execute(client, ...args));
+  }
+}
 
 module.exports = client.login(token);
