@@ -1,5 +1,7 @@
 'use strict';
 
+require('colors');
+
 const { readdirSync } = require('fs');
 const { Client, Collection } = require('discord.js');
 const { token } = require('../config.json');
@@ -21,5 +23,16 @@ for (const file of eventFiles) {
     client.on(eventName, (...args) => event.execute(client, ...args));
   }
 }
+
+process.on('SIGINT', () => {
+  console.log('Gracefully stopping bot...'.bold.red);
+
+  /*
+   * End database connection here if exists.
+   */
+
+  client.destroy();
+  process.exit(0);
+});
 
 module.exports = client.login(token);

@@ -9,6 +9,9 @@ const { readdirSync } = require('fs');
 module.exports = {
   once: true,
   execute: client => {
+    // This will consider the bot process as 'online' (only if running with pm2)
+    process.send('ready');
+
     const { interactions, application } = client;
 
     const interactionFiles = readdirSync('./src/interactions').filter(file => file.endsWith('.js'));
