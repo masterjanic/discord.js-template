@@ -31,7 +31,10 @@ The following dependencies will be installed:
 - [nodemon](https://www.npmjs.com/package/nodemon) for auto-restarting while developing
 
 ### Scripts
-You can use the pre-made script `npm run start` to run the bot or `npm start:dev` to run it with **Nodemon**.
+There are **3** premade scripts for running the Discord bot:
+- `npm run start`: Run the bot normally
+- `npm run start:dev`: Run the bot with **Nodemon**
+- `npm run start:pm2`: Run the bot with **pm2** (You will need to have pm2 installed locally `npm i -g pm2`)
 
 ### Examples
 See the created `interactions` folder for a documented example interaction.
