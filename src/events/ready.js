@@ -10,7 +10,7 @@ module.exports = {
   once: true,
   execute: client => {
     // This will consider the bot process as 'online' (only if running with pm2)
-    process.send('ready');
+    if (typeof process.send === 'function') process.send('ready');
 
     const { interactions, application } = client;
 
