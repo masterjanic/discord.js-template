@@ -1,6 +1,6 @@
 {
   "name": "discord.js-template",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "description": "A discord.js template for v13 bots featuring slash commands, linter and more.",
   "private": true,
   "main": "src/index.js",
@@ -27,15 +27,7 @@
   "homepage": "https://github.com/masterjanic/discord.js-template#readme",
   "engines": {
     "node": ">=16.6.0",
-    "npm": ">=7.0.0"
-  },
-  "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.24.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "nodemon": "^2.0.12",
-    "prettier": "^2.3.2"
+    "npm": ">=7.20.0"
   },
   "dependencies": {
     "bufferutil": "^4.0.3",
@@ -44,5 +36,13 @@
     "discord.js": "^13.1.0",
     "utf-8-validate": "^5.0.5",
     "zlib-sync": "^0.1.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
   }
 }
