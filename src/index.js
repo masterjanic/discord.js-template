@@ -35,4 +35,6 @@ process.on('SIGINT', () => {
   process.exit(0);
 });
 
-module.exports = client.login(token);
+client.login(token);
+
+module.exports = client;
