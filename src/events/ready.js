@@ -15,10 +15,10 @@ module.exports = {
     const { interactions, application } = client;
 
     const interactionFiles = readdirSync('./src/interactions').filter(file => file.endsWith('.js'));
-    interactionFiles.forEach(file => {
+    for (const file of interactionFiles) {
       const interaction = require(`../interactions/${file}`);
       interactions.set(interaction.data.name, interaction);
-    });
+    }
 
     return application.commands?.set([...interactions.map(i => i.data)]);
   },
