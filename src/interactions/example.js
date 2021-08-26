@@ -6,10 +6,32 @@
 module.exports = {
   data: {
     name: 'example',
-    description: 'This is an example interaction!',
+    description: 'Returns the time elapsed since January 1, 1970.',
+    options: [
+      {
+        name: 'unit',
+        description: 'The unit of the elapsed time.',
+        type: 'STRING',
+        required: false,
+        choices: [
+          { name: 'Days', value: 'days' },
+          { name: 'Hours', value: 'hours' },
+          { name: 'Minutes', value: 'minutes' },
+          { name: 'Seconds', value: 'seconds' },
+          { name: 'Milliseconds', value: 'milliseconds' },
+        ],
+      },
+    ],
   },
   execute: interaction => {
-    const milliseconds = Date.now();
-    return interaction.reply(`A total of **${milliseconds}** milliseconds elapsed since January 1, 1970 00:00:00 UTC!`);
+    const unit = interaction.options.getString('unit') || 'milliseconds';
+
+    let value = Date.now();
+    if (unit === 'seconds') value /= 1000;
+    if (unit === 'minutes') value /= 1000 * 60;
+    if (unit === 'hours') value /= 1000 * 60 * 60;
+    if (unit === 'days') value /= 1000 * 60 * 60 * 24;
+
+    return interaction.reply(`A total of **${Math.round(value)}** ${unit} elapsed since January 1, 1970 00:00:00 UTC!`);
   },
 };
