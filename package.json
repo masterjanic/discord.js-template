@@ -38,9 +38,9 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.12",
-    "prettier": "^2.3.2"
+    "prettier": "^2.4.1"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.3",
