@@ -3,7 +3,7 @@
 module.exports = {
   once: false,
   execute: (client, interaction) => {
-    if (!interaction.isCommand()) return;
+    if (!interaction.isCommand() && !interaction.isContextMenu()) return;
 
     try {
       return client.interactions.get(interaction.commandName)?.execute(interaction);
