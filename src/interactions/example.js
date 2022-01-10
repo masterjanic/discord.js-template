@@ -24,7 +24,7 @@ module.exports = {
     ],
   },
   execute: interaction => {
-    const unit = interaction.options.getString('unit') || 'milliseconds';
+    const unit = interaction.options.getString('unit') ?? 'milliseconds';
 
     let value = Date.now();
     if (unit === 'seconds') value /= 1000;
