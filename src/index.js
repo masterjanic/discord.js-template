@@ -7,7 +7,7 @@ const { Client, Collection } = require('discord.js');
 const { token } = require('../config.json');
 const client = new Client({
   // You can define your needed intents. See https://discordjs.guide/popular-topics/intents.html#gateway-intents
-  intents: ['GUILDS', 'GUILD_MESSAGES'],
+  intents: ['GUILDS'],
   retryLimit: Infinity,
 });
 client.interactions = new Collection();
