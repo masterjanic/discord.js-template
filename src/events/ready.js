@@ -20,6 +20,12 @@ module.exports = {
       interactions.set(interaction.data.name, interaction);
     }
 
+    /* Uncomment for local testing
+    for (const guild of [...client.guilds.cache.values()]) {
+      await guild.commands.set([...interactions.map(i => i.data)]);
+    }
+    */
+
     return application.commands?.set([...interactions.map(i => i.data)]);
   },
 };
