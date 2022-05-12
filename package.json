@@ -35,12 +35,12 @@
     "discord.js": "^13.6.0"
   },
   "devDependencies": {
-    "eslint": "^8.12.0",
+    "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "nodemon": "^2.0.15",
-    "prettier": "^2.6.1"
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.6",
