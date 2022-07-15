@@ -32,15 +32,15 @@
   "dependencies": {
     "colors": "^1.4.0",
     "common-tags": "^1.8.2",
-    "discord.js": "^13.6.0"
+    "discord.js": "^13.8.1"
   },
   "devDependencies": {
-    "eslint": "^8.15.0",
+    "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "nodemon": "^2.0.16",
-    "prettier": "^2.6.2"
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.6",
