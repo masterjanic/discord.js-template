@@ -10,7 +10,10 @@ const client = new Client({
   intents: ['GUILDS'],
   retryLimit: Infinity,
 });
-client.interactions = new Collection();
+client.commands = new Collection();
+client.modals = new Collection();
+client.contextMenus = new Collection();
+client.selectMenus = new Collection();
 
 const eventFiles = readdirSync('./src/events').filter(file => file.endsWith('.js'));
 for (const file of eventFiles) {
